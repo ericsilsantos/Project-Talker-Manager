@@ -4,6 +4,7 @@ const req1e2 = require('./req/requisito1e2');
 const req3 = require('./req/requisito3');
 const req5 = require('./req/requisito5');
 const req6 = require('./req/requisito6');
+const req7 = require('./req/requisito7');
 const {
   validarRate,
   validarAge,
@@ -30,6 +31,8 @@ app.post('/talker',
 validarToken, validarTalk, validarRate, validarAge, validarDate, validarName, req5);
 app.put('/talker/:id',
 validarToken, validarTalk, validarRate, validarAge, validarDate, validarName, req6);
+app.delete('/talker/:id', validarToken, req7);
+
 app.listen(PORT, () => {
   console.log('Iniciando projeto');
 });

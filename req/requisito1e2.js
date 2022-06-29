@@ -1,5 +1,6 @@
 const express = require('express');
 const fs = require('fs/promises');
+// const req5 = require('./requisito5');
 
 const req1e2 = express();
 // primeiro requisito
@@ -27,5 +28,6 @@ req1e2.get('/:id', async (req, res) => {
     res.status(400).json({ message: error });
   }
 });
-
+// quinto requisito
+// req1e2.post('/', req5);
 module.exports = req1e2;

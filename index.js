@@ -5,6 +5,7 @@ const req3 = require('./req/requisito3');
 const req5 = require('./req/requisito5');
 const req6 = require('./req/requisito6');
 const req7 = require('./req/requisito7');
+const req8 = require('./req/requisito8');
 const {
   validarRate,
   validarAge,
@@ -25,6 +26,7 @@ app.get('/', (_request, response) => {
   response.status(HTTP_OK_STATUS).send();
 });
 
+app.get('/talker/search', validarToken, req8);
 app.use('/talker', req1e2);
 app.use('/login', req3);
 app.post('/talker',

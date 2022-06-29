@@ -1,5 +1,7 @@
 const express = require('express');
 const fs = require('fs/promises');
+// const req8 = require('./requisito8');
+// const { validarToken } = require('./auxReq5');
 // const req5 = require('./requisito5');
 
 const req1e2 = express();
@@ -30,4 +32,7 @@ req1e2.get('/:id', async (req, res) => {
 });
 // quinto requisito
 // req1e2.post('/', req5);
+// Oitavo requisito
+// req1e2.get('/search', validarToken, req8);
+
 module.exports = req1e2;

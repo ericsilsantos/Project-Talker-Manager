@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const req1 = require('./req/requisito1');
+const req1e2 = require('./req/requisito1e2');
 
 const app = express();
 app.use(bodyParser.json());
@@ -13,7 +13,7 @@ app.get('/', (_request, response) => {
   response.status(HTTP_OK_STATUS).send();
 });
 
-app.use('/talker', req1);
+app.use('/talker', req1e2);
 
 app.listen(PORT, () => {
   console.log('Iniciando projeto');

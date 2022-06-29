@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const req1e2 = require('./req/requisito1e2');
 const req3 = require('./req/requisito3');
 const req5 = require('./req/requisito5');
+const req6 = require('./req/requisito6');
 const {
   validarRate,
   validarAge,
@@ -27,7 +28,8 @@ app.use('/talker', req1e2);
 app.use('/login', req3);
 app.post('/talker',
 validarToken, validarTalk, validarRate, validarAge, validarDate, validarName, req5);
-
+app.put('/talker/:id',
+validarToken, validarTalk, validarRate, validarAge, validarDate, validarName, req6);
 app.listen(PORT, () => {
   console.log('Iniciando projeto');
 });
